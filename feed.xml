@@ -3,10 +3,87 @@
     <title>Duck Travel</title>
     <link href="https://rubenwgs.github.io/gh-pages/feed.xml" rel="self" />
     <link href="https://rubenwgs.github.io/gh-pages" />
-    <updated>1970-01-01T01:00:00+01:00</updated>
+    <updated>2025-07-20T17:04:59+02:00</updated>
     <author>
         <name>Ruben</name>
     </author>
     <id>https://rubenwgs.github.io/gh-pages</id>
 
+    <entry>
+        <title>Discovering Brittany in 8 Days</title>
+        <author>
+            <name>Ruben</name>
+        </author>
+        <link href="https://rubenwgs.github.io/gh-pages/discovering-brittany-in-8-days.html"/>
+        <id>https://rubenwgs.github.io/gh-pages/discovering-brittany-in-8-days.html</id>
+        <media:content url="https://rubenwgs.github.io/gh-pages/media/posts/1/DSCF6816.jpg" medium="image" />
+
+        <updated>2025-07-20T16:47:49+02:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://rubenwgs.github.io/gh-pages/media/posts/1/DSCF6816.jpg" alt="" />
+                    Today, I want to recap on our last road trip through Brittany we did last summer in 2025. We spent an incredible 8 days on the road, sleeping on parking lots as well as beautiful campsite, enjoyed the rawness of the Atlantic Ocean, and enjoyed&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://rubenwgs.github.io/gh-pages/media/posts/1/DSCF6816.jpg" class="type:primaryImage" alt="" /></p>
+                
+  <p>
+    Today, I want to recap on our last road trip through Brittany we did last summer in 2025. We spent an incredible 8 days on the road, sleeping on parking lots as well as beautiful campsite, enjoyed the rawness of the Atlantic Ocean, and enjoyed the local cuisine (as well as the local Cidre!!).
+  </p>
+
+  <p>
+    This will serve as more of a personal diary-like overview of our trip, though I'm sure you will also find this helpful for your own travel-plans to that region.
+  </p>
+
+    <h1 id="itinerary">
+      Itinerary
+    </h1>
+
+    <h3 id="day-1-arriving-in-nantes">
+      Day 1 - Arriving in Nantes
+    </h3>
+
+  <p>
+    After 8h travelling by train, with stops in Strasbourg and Paris, we arrived (without delay!) in the beautiful city of <i>Nantes</i>. We picked up our VW T6 California Camper Van from <u>roadsurfer.com</u>&nbsp;without any problems and immediately hit the road. The first drive took us to <i>Saint Nazaire,</i>&nbsp;where we found a parking spot to spend the night and took our first (of actually not that many) swims in the Atlantic Ocean. We finished the day with our signature meal: spaghetti, cherry tomatoes, and Burrata.
+  </p>
+
+  <div  class="gallery-wrapper gallery-wrapper--full">
+    <div class="gallery" data-columns="3">
+      <figure class="gallery__item">
+      <a href="https://rubenwgs.github.io/gh-pages/media/posts/1/gallery/DSCF5947.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://rubenwgs.github.io/gh-pages/media/posts/1/gallery/DSCF5947-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://rubenwgs.github.io/gh-pages/media/posts/1/gallery/DSCF5998.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://rubenwgs.github.io/gh-pages/media/posts/1/gallery/DSCF5998-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://rubenwgs.github.io/gh-pages/media/posts/1/gallery/DSCF6011.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://rubenwgs.github.io/gh-pages/media/posts/1/gallery/DSCF6011-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://rubenwgs.github.io/gh-pages/media/posts/1/gallery/DSCF6016.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://rubenwgs.github.io/gh-pages/media/posts/1/gallery/DSCF6016-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://rubenwgs.github.io/gh-pages/media/posts/1/gallery/DSCF6030.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://rubenwgs.github.io/gh-pages/media/posts/1/gallery/DSCF6030-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      
+    </figure>
+    </div>
+  </div>
+
+  <p>
+    
+  </p>
+            ]]>
+        </content>
+    </entry>
 </feed>
