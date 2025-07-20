@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="https://rubenwgs.github.io/gh-pages/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://blog.rwgs.ch/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 <url>
-<loc>https://rubenwgs.github.io/gh-pages/</loc>
+<loc>https://blog.rwgs.ch/</loc>
 </url>
 <url>
-<loc>https://rubenwgs.github.io/gh-pages/discovering-brittany-in-8-days.html</loc>
+<loc>https://blog.rwgs.ch/discovering-brittany-in-8-days.html</loc>
 <lastmod>2025-07-20T17:11:22+02:00</lastmod>
 <image:image>
-<image:loc>https://rubenwgs.github.io/gh-pages/media/posts/1/DSCF6816.jpg</image:loc>
+<image:loc>https://blog.rwgs.ch/media/posts/1/DSCF6816.jpg</image:loc>
 <image:title><![CDATA[]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://rubenwgs.github.io/gh-pages/media/posts/1/gallery/DSCF5947.jpg</image:loc>
+<image:loc>https://blog.rwgs.ch/media/posts/1/gallery/DSCF5947.jpg</image:loc>
 <image:title><![CDATA[]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://rubenwgs.github.io/gh-pages/media/posts/1/gallery/DSCF5998.jpg</image:loc>
+<image:loc>https://blog.rwgs.ch/media/posts/1/gallery/DSCF5998.jpg</image:loc>
 <image:title><![CDATA[]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://rubenwgs.github.io/gh-pages/media/posts/1/gallery/DSCF6011.jpg</image:loc>
+<image:loc>https://blog.rwgs.ch/media/posts/1/gallery/DSCF6011.jpg</image:loc>
 <image:title><![CDATA[]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://rubenwgs.github.io/gh-pages/media/posts/1/gallery/DSCF6016.jpg</image:loc>
+<image:loc>https://blog.rwgs.ch/media/posts/1/gallery/DSCF6016.jpg</image:loc>
 <image:title><![CDATA[]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://rubenwgs.github.io/gh-pages/media/posts/1/gallery/DSCF6030.jpg</image:loc>
+<image:loc>https://blog.rwgs.ch/media/posts/1/gallery/DSCF6030.jpg</image:loc>
 <image:title><![CDATA[]]></image:title>
 </image:image>
 </url>
