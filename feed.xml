@@ -3,7 +3,7 @@
     <title>rwgs Blog</title>
     <link href="https://blog.rwgs.ch/feed.xml" rel="self" />
     <link href="https://blog.rwgs.ch" />
-    <updated>2025-07-21T15:59:54+02:00</updated>
+    <updated>2025-07-21T16:26:42+02:00</updated>
     <author>
         <name>Ruben</name>
     </author>
@@ -40,7 +40,7 @@
   <div class="post__toc">
     <h3>Overview</h3>
     <ul>
-      <li><a href="#day-1-arriving-in-nantes">Day 1 - Arriving in Nantes</a></li><li><a href="#day-2-la-petite-maison-aux-volets-bleus-and-the-first-cidre">Day 2 - La Petite Maison Aux Volets Bleus and the First Cidre</a></li><li><a href="#day-3-beaches-of-poulhan">Day 3 - Beaches of Poulhan</a></li>
+      <li><a href="#day-1-arriving-in-nantes">Day 1 - Arriving in Nantes</a></li><li><a href="#day-2-la-petite-maison-aux-volets-bleus-and-the-first-cidre">Day 2 - La Petite Maison Aux Volets Bleus and the First Cidre</a></li><li><a href="#day-3-beaches-of-poulhan">Day 3 - Beaches of Poulhan</a></li><li><a href="#day-4-not-pointe-du-raz">Day 4 - Not Pointe du Raz</a></li>
     </ul>
   </div>
   
@@ -337,6 +337,88 @@
     </figure>
     </div>
   </div>
+
+    <h2 id="day-4-not-pointe-du-raz">
+      Day 4 - Not Pointe du Raz
+    </h2>
+
+  <p>
+    <b>Route:&nbsp;Pors Poulhan to Pen an Ero via Plogoff and Pen Hir, 130km</b>
+  </p>
+<div><!-- Leaflet CSS & JS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- Leaflet Routing Machine -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+<script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
+
+<!-- Map container -->
+<div id="map-day4" style="height: 400px; margin: 1em 0;"></div>
+
+<script>
+  var map = L.map('map-day4', {
+    zoomControl: false
+  }).setView([48.14052401112773, -4.43612874321248], 9);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  L.Routing.control({
+    waypoints: [
+      L.latLng(47.98018427347514, -4.4495398100344525),
+      L.latLng(48.03738622291839, -4.712253341168814),
+      L.latLng(48.08972600393127, -4.33374716324796),
+      L.latLng(48.258390478604994, -4.621275620371143),
+      L.latLng(48.280853787152445, -4.502382504435114)
+    ],
+    createMarker: function(i, wp, nWps) {
+      if (i === 0 || i === nWps - 1) {
+        return L.marker(wp.latLng).bindPopup(
+          i === 0 ? 'Start: Pors Poulhan' : 'Finish: Camping Gwel Kaër'
+        );
+      }
+      if (i === 1) {
+        return L.marker(wp.latLng).bindPopup(
+          'Monsieur Papier'
+        );
+      }
+      if (i === 3) {
+        return L.marker(wp.latLng).bindPopup(
+          'Pen Hir'
+        );
+      }
+      return null;
+    },
+    routeWhileDragging: false,
+    draggableWaypoints: false,
+    addWaypoints: false,
+    show: false,
+    showAlternatives: false,
+    fitSelectedRoutes: true
+  }).addTo(map);
+</script></div>
+
+  <p>
+    Unfortunately, day 4 did not surprise us with good weather. Even though we set our alarm clock the earliest we had so far this trip, we were not able to enjoy the sunrise from the roof tent of our camper van. Nevertheless, the first goal was clear: visiting the infamous <i>Pointe du Raz</i>&nbsp;to see the up to 72m high cliffs. What we did not know was how famous <i>Point du Raz</i>&nbsp;was - there is a touristic center some distance away from the cliffs, where you park your car and are shuttled with a bus from there onwards. We quickly decided that this was not for us, and instead enjoyed breakfast in a small coffee shop we discovered by chance called <i>Monsieur Papier.</i>
+  </p>
+
+  <p>
+    Since the weather still wasn't any better, we headed along the coast through <i>Douarnenez</i>&nbsp;up to <i>Crozon</i>&nbsp;where we decided to give <i>Pen Hir</i>&nbsp;a try (similar to <i>Pointe du Raz</i>, but a tad less touristic). This viewpoint was also packed with tourists, but we were free to discover it on our own and the views were stunning! I would definitely recommend visiting.
+  </p>
+
+  <p>
+    The day ended with us driving to the <i>Camping Gwel Kaër,</i>&nbsp;visiting <i>Le Fret</i>&nbsp;by foot and enjoying some Apéro and Cidre in a local bar, and then heading back to the camping for dinner - self-made burgers with rice. Warning: Cidre is very very tasty, but as it is made from apples it can have a laxative effect when consumed in big amounts - and camping toilets are not really the place you want to spend more than 5 minutes.
+  </p>
+
+  <p>
+    <b>Highlights:</b>
+  </p>
+
+  <p>
+    
+  </p>
             ]]>
         </content>
     </entry>
