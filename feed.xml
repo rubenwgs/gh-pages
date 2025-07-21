@@ -3,7 +3,7 @@
     <title>Duck Travel</title>
     <link href="https://blog.rwgs.ch/feed.xml" rel="self" />
     <link href="https://blog.rwgs.ch" />
-    <updated>2025-07-20T19:17:31+02:00</updated>
+    <updated>2025-07-21T10:18:10+02:00</updated>
     <author>
         <name>Ruben</name>
     </author>
@@ -95,8 +95,16 @@
 </div>
 
   <p>
-    After 8h travelling by train, with stops in Strasbourg and Paris, we arrived (without delay!) in the beautiful city of <i>Nantes</i>. We picked up our VW T6 California Camper Van from <u>roadsurfer.com</u>&nbsp;without any problems and immediately hit the road. The first drive took us to <i>Saint Nazaire,</i>&nbsp;where we found a parking spot to spend the night and took our first (of actually not that many) swims in the Atlantic Ocean. We finished the day with our signature meal: spaghetti, cherry tomatoes, and Burrata.
+    After 8h travelling by train, with stops in Strasbourg and Paris, we arrived (without delay!) in the beautiful city of <i>Nantes</i>. We picked up our VW T6 California Camper Van from <a href="https://roadsurfer.com" target="_blank">roadsurfer.com</a>&nbsp;without any problems and immediately hit the road. The first drive took us to <i>Saint Nazaire,</i>&nbsp;where we found a parking spot to spend the night and took our first (of actually not that many) swims in the Atlantic Ocean. We finished the day with our signature meal: spaghetti, cherry tomatoes, and Burrata.
   </p>
+
+  <p>
+    <b>Highlights:</b>
+  </p>
+
+  <ul>
+    <li>The parking lot we spend the first night is highly recommended. It is located at the <i>Plage de la Courance</i>&nbsp;and can be found on park4night <a href="https://park4night.com/en/place/293293" target="_blank">here.</a>&nbsp;It even has a pretty clean public toilet!</li>
+  </ul>
 
   <div  class="gallery-wrapper gallery-wrapper--wide">
     <div class="gallery" data-columns="3">
@@ -111,20 +119,110 @@
       </a>
       
     </figure><figure class="gallery__item">
-      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF6011.jpg" data-size="2000x3000">
-        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF6011-thumbnail.jpg" height="1080" width="720" alt="" >
-      </a>
-      
-    </figure><figure class="gallery__item">
-      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF6016.jpg" data-size="2000x3000">
-        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF6016-thumbnail.jpg" height="1080" width="720" alt="" >
-      </a>
-      
-    </figure><figure class="gallery__item">
       <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF6030.jpg" data-size="2000x3000">
         <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF6030-thumbnail.jpg" height="1080" width="720" alt="" >
       </a>
       
+    </figure>
+    </div>
+  </div>
+
+    <h3 id="day-2-la-petite-maison-aux-volets-bleus-and-the-first-cidre">
+      Day 2 - La Petite Maison Aux Volets Bleus and the First Cidre
+    </h3>
+
+  <p>
+    <b>Route: Saint-Nazaire to Saint-Cado via Quiberon, 178km</b>
+  </p>
+<div><!-- Leaflet CSS & JS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- Leaflet Routing Machine -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+<script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
+
+<!-- Map container -->
+<div id="map-day2" style="height: 400px; margin: 1em 0;"></div>
+
+<script>
+  var map = L.map('map-day2', {
+    zoomControl: false
+  }).setView([47.55595368910675, -2.714656425622805], 9);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  L.Routing.control({
+    waypoints: [
+      L.latLng(47.240723960606736, -2.2703691504715837),
+      L.latLng(47.30370245285182, -2.455923333318907),
+      L.latLng(47.47577683282665, -3.1319645630408783),
+      L.latLng(47.682747495227105, -3.188668053375401)
+    ],
+    createMarker: function(i, wp, nWps) {
+      if (i === 0 || i === nWps - 1) {
+        return L.marker(wp.latLng).bindPopup(
+          i === 0 ? 'Start: Saint-Nazaire' : 'Finish: Saint-Cado'
+        );
+      }
+      if (i === 1) {
+        return L.marker(wp.latLng).bindPopup(
+          'Marais salants de Guérande'
+        );
+      }
+      return null;
+    },
+    routeWhileDragging: false,
+    draggableWaypoints: false,
+    addWaypoints: false,
+    show: false,
+    showAlternatives: false,
+    fitSelectedRoutes: true
+  }).addTo(map);
+</script>
+
+</div>
+
+  <p>
+    We started our first official road trip day with the obligatory coffee, packed everything up, and headed towards the&nbsp;<i>Marais salants de Guérande.</i>&nbsp;These 2'000 hectares of salt marches provide a unique landscape and is definitely worth a visit! We made a quick stop on the side of the road (photography-time for me, and Nutella bread for Rahel), took in the almost outer worldly view, and continued towards <i>Quiberon.</i>&nbsp;Close to the&nbsp;<i>Château de Turpault</i>&nbsp;there is a parking lot which provided us with a great option for strolling along the coast and having a lunch break.
+  </p>
+
+  <p>
+    The final stop of the day took us to the&nbsp;<i>Camping de Saint-Cado.</i>&nbsp;Once arrived, we explored the <i>Île de Saint-Cado,</i>&nbsp;took the obligatory pictures of the&nbsp;<i>La petite maison aux volets bleus,</i>&nbsp;and enjoyed our first local Cidre and some food at the local bar <i>Le Saint-Cado </i>to end the evening.
+  </p>
+
+  <p>
+    <b>Highlights:</b>
+  </p>
+
+  <ul>
+    <li>The&nbsp;<a href="https://maps.app.goo.gl/2sv1u1Pbg5tJmssc9" target="_blank" style="font-style: italic;">Marais salants de Guérande</a>&nbsp;is really worth a visit, the landscape is something else.</li><li>I would definitely take a look at the&nbsp;<i><a href="https://maps.app.goo.gl/bBbCKX9Bta2ZHWuC6" target="_blank">La petite maison aux volets bleus</a></i> - again, the scenery is beautiful.</li>
+  </ul>
+
+  <div  class="gallery-wrapper gallery-wrapper--wide">
+    <div class="gallery" data-columns="3">
+      <figure class="gallery__item">
+      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF6163.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF6163-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      <figcaption>Château de Turpault</figcaption>
+    </figure><figure class="gallery__item">
+      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF6353.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF6353-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      <figcaption>La petite maison aux volets bleus</figcaption>
+    </figure><figure class="gallery__item">
+      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF6366.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF6366-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      <figcaption>Loca Cidre at Le Saint-Cado</figcaption>
+    </figure><figure class="gallery__item">
+      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF6071.jpg" data-size="3000x2000">
+        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF6071-thumbnail.jpg" height="480" width="720" alt="" >
+      </a>
+      <figcaption>Marais salants de Guérande</figcaption>
     </figure>
     </div>
   </div>
