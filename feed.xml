@@ -3,7 +3,7 @@
     <title>rwgs Blog</title>
     <link href="https://blog.rwgs.ch/feed.xml" rel="self" />
     <link href="https://blog.rwgs.ch" />
-    <updated>2025-07-31T11:16:31+02:00</updated>
+    <updated>2025-07-31T11:48:28+02:00</updated>
     <author>
         <name>Ruben</name>
     </author>
@@ -22,7 +22,7 @@
             <summary>
                 <![CDATA[
                         <img src="https://blog.rwgs.ch/media/posts/1/DSCF6323.jpg" alt="" />
-                    Today, I want to recap on our last road trip through Brittany we did last summer in 2025. We spent an incredible 8 days on the road and 2 days in Nantes, sleeping on parking lots as well as beautiful campsite, enjoyed the rawness of&hellip;
+                    Today, I want to recap on our last road trip through Brittany we did last summer in 2025. We spent an incredible 9 days on the road and 1 day in Nantes, sleeping on parking lots as well as beautiful campsite, enjoyed the rawness of&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -30,7 +30,7 @@
                     <p><img src="https://blog.rwgs.ch/media/posts/1/DSCF6323.jpg" class="type:primaryImage" alt="" /></p>
                 
   <p>
-    Today, I want to recap on our last road trip through Brittany we did last summer in 2025. We spent an incredible 8 days on the road and 2 days in Nantes, sleeping on parking lots as well as beautiful campsite, enjoyed the rawness of the Atlantic Ocean, and enjoyed the local cuisine (as well as the local Cidre!!).
+    Today, I want to recap on our last road trip through Brittany we did last summer in 2025. We spent an incredible 9 days on the road and 1 day in Nantes, sleeping on parking lots as well as beautiful campsite, enjoyed the rawness of the Atlantic Ocean, and enjoyed the local cuisine (as well as the local Cidre!!).
   </p>
 
   <p>
@@ -40,7 +40,7 @@
   <div class="post__toc">
     <h3>Overview</h3>
     <ul>
-      <li><a href="#day-1-arriving-in-nantes">Day 1 - Arriving in Nantes</a></li><li><a href="#day-2-la-petite-maison-aux-volets-bleus-and-the-first-cidre">Day 2 - La Petite Maison Aux Volets Bleus and the First Cidre</a></li><li><a href="#day-3-beaches-of-poulhan">Day 3 - Beaches of Poulhan</a></li><li><a href="#day-4-not-pointe-du-raz">Day 4 - Not Pointe du Raz</a></li><li><a href="#day-5-andnbspbrest">Day 5 -&nbsp;Brest</a></li><li><a href="#day-6-rain-rain-and-roscoff">Day 6 - Rain, Rain and Roscoff</a></li>
+      <li><a href="#day-1-arriving-in-nantes">Day 1 - Arriving in Nantes</a></li><li><a href="#day-2-la-petite-maison-aux-volets-bleus-and-the-first-cidre">Day 2 - La Petite Maison Aux Volets Bleus and the First Cidre</a></li><li><a href="#day-3-beaches-of-poulhan">Day 3 - Beaches of Poulhan</a></li><li><a href="#day-4-not-pointe-du-raz">Day 4 - Not Pointe du Raz</a></li><li><a href="#day-5-andnbspbrest">Day 5 -&nbsp;Brest</a></li><li><a href="#day-6-rain-rain-and-roscoff">Day 6 - Rain, Rain and Roscoff</a></li><li><a href="#day-7-saint-malo">Day 7 - Saint-Malo</a></li><li><a href="#day-8-uniqlo">Day 8 - Uniqlo</a></li>
     </ul>
   </div>
   
@@ -668,6 +668,111 @@
     </figure>
     </div>
   </div>
+
+    <h2 id="day-7-saint-malo">
+      Day 7 - Saint-Malo
+    </h2>
+
+  <ul>
+    <li><b>Route:&nbsp;Saint-Quay-Portrieux to Saint-Pair-sur-Mer via Saint-Malo</b></li><li><b>Distance: 189km</b></li><li><b>Overnight spot:&nbsp;<a href="https://maps.app.goo.gl/ppGsFLjEjfLH1rCk9" target="_blank">Camping l'Etoile de Mer</a></b></li>
+  </ul>
+<div><div class="map-wrapper">
+  <div id="map-day7" class="leaflet-map"></div>
+  <div class="map-overlay" id="map-day7-overlay">Click to activate map</div>
+</div>
+
+<script>
+  const map7 = L.map('map-day7', {
+    zoomControl: false
+  }).setView([48.62584891354688, -2.1552759694233905], 9);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map7);
+
+  const control7 = L.Routing.control({
+    waypoints: [
+      L.latLng(48.66300852067113, -2.8447780436056975),
+      L.latLng(48.552134537372055, -2.5470745219114606),
+      L.latLng(48.62052750241595, -2.441734565528424),
+      L.latLng(48.58155966679622, -2.1266420568337865),
+      L.latLng(48.64097196089893, -2.0197730083557035),
+      L.latLng(48.789612953756304, -1.5673110692692782)
+    ],
+    createMarker: function(i, wp, nWps) {
+      if (i === 0) return L.marker(wp.latLng).bindPopup("Start: Camping Bellevue Côtes d'Armor");
+      if (i === 3) return L.marker(wp.latLng).bindPopup("Parking in Saint-Malo");
+      if (i === nWps - 1) return L.marker(wp.latLng).bindPopup("Finish: Camping l'Etoile de Mer");
+      return null;
+    },
+    routeWhileDragging: false,
+    draggableWaypoints: false,
+    addWaypoints: false,
+    show: false,
+    showAlternatives: false,
+    fitSelectedRoutes: true
+  }).addTo(map7);
+
+  const overlay7 = document.getElementById('map-day7-overlay');
+  const container7 = document.getElementById('map-day7');
+
+  overlay7.addEventListener('click', () => {
+    container7.classList.add('enabled');
+    overlay7.classList.add('hidden');
+  });
+
+  container7.addEventListener('mouseleave', () => {
+    container7.classList.remove('enabled');
+    overlay7.classList.remove('hidden');
+  });
+</script>
+
+</div>
+
+  <p>
+    The trip was slowly coming to an end, meaning we needed to make up some distance to be back in Nantes on time. The 7th day of our trip took us to <i>Saint-Malo,</i>&nbsp;a historic French port and a walled city which was very touristic. The walls around the city and the way it is built in general was quite impressive, though I'm not sure if it would make it into the highlights of this trip.
+  </p>
+
+  <p>
+    Once in <i>Saint-Malo</i> (it was very hard to find a parking spot, most parkings are limited to 1.90m, but we found <a href="https://maps.app.goo.gl/u72GQkJXkqQ3ksXa6" target="_blank">this one</a> that worked) and after having some hangry discussions, we ended up eating a Pizza, strolling through the city, and buying some jewellery.
+  </p>
+
+  <p>
+    The afternoon was spent on the road, taking us all the way up to <i>Saint-Pair-sur-Mer,</i>&nbsp;where we again found a very well located camping and took our final swim in the ocean during sunset-time. 100% recommended!
+  </p>
+
+  <div  class="gallery-wrapper gallery-wrapper--wide">
+    <div class="gallery" data-columns="3">
+      <figure class="gallery__item">
+      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF7656.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF7656-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF7717.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF7717-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF8032.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF8032-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      
+    </figure>
+    </div>
+  </div>
+
+    <h2 id="day-8-uniqlo">
+      Day 8 - Uniqlo
+    </h2>
+
+  <ul>
+    <li><b>Route:&nbsp;Saint-Pair-sur-Mer to Le Lion-d'Angers via Rennes</b></li><li><b>Distance: 214km</b></li><li><b>Overnight spot:&nbsp;<a href="https://maps.app.goo.gl/p9fsu1LrdpgBSD4T7" target="_blank">Camping du Lion d'Angers</a></b></li>
+  </ul>
+
+  <p>
+    
+  </p>
             ]]>
         </content>
     </entry>
