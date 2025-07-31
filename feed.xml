@@ -3,7 +3,7 @@
     <title>rwgs Blog</title>
     <link href="https://blog.rwgs.ch/feed.xml" rel="self" />
     <link href="https://blog.rwgs.ch" />
-    <updated>2025-07-21T16:55:25+02:00</updated>
+    <updated>2025-07-31T10:31:48+02:00</updated>
     <author>
         <name>Ruben</name>
     </author>
@@ -40,7 +40,7 @@
   <div class="post__toc">
     <h3>Overview</h3>
     <ul>
-      <li><a href="#day-1-arriving-in-nantes">Day 1 - Arriving in Nantes</a></li><li><a href="#day-2-la-petite-maison-aux-volets-bleus-and-the-first-cidre">Day 2 - La Petite Maison Aux Volets Bleus and the First Cidre</a></li><li><a href="#day-3-beaches-of-poulhan">Day 3 - Beaches of Poulhan</a></li><li><a href="#day-4-not-pointe-du-raz">Day 4 - Not Pointe du Raz</a></li>
+      <li><a href="#day-1-arriving-in-nantes">Day 1 - Arriving in Nantes</a></li><li><a href="#day-2-la-petite-maison-aux-volets-bleus-and-the-first-cidre">Day 2 - La Petite Maison Aux Volets Bleus and the First Cidre</a></li><li><a href="#day-3-beaches-of-poulhan">Day 3 - Beaches of Poulhan</a></li><li><a href="#day-4-not-pointe-du-raz">Day 4 - Not Pointe du Raz</a></li><li><a href="#day-5-andnbspbrest">Day 5 -&nbsp;Brest</a></li><li><a href="#day-6-rain-rain-and-roscoff">Day 6 - Rain, Rain and Roscoff</a></li>
     </ul>
   </div>
   
@@ -49,9 +49,9 @@
       Day 1 - Arriving in Nantes
     </h2>
 
-  <p>
-    <b>Route: Nantes to Saint-Nazaire, 99km</b>
-  </p>
+  <ul>
+    <li><b>Route: Nantes to Saint-Nazaire</b></li><li><b>Distance:&nbsp;99km</b></li><li><b>Overnight spot: <a href="https://park4night.com/en/place/293293" target="_blank">Parking at&nbsp;Plage de la Courance</a></b></li>
+  </ul>
 <div><!-- Leaflet CSS & JS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -107,7 +107,7 @@
   </p>
 
   <ul>
-    <li>The parking lot we spend the first night is highly recommended. It is located at the <i>Plage de la Courance</i>&nbsp;and can be found on park4night <a href="https://park4night.com/en/place/293293" target="_blank">here.</a>&nbsp;It even has a pretty clean public toilet!</li>
+    <li>The parking lot we spend the first night is highly recommended. It is located at the <i>Plage de la Courance</i>&nbsp;and can be found on park4night <a href="https://park4night.com/en/place/293293" target="_blank" class="" data-link-popup-id="8a1ed88e-b394-483b-8129-e5bfe0c8a4fb">here.</a>&nbsp;It even has a pretty clean public toilet!</li>
   </ul>
 
   <div  class="gallery-wrapper gallery-wrapper--wide">
@@ -135,9 +135,9 @@
       Day 2 - La Petite Maison Aux Volets Bleus and the First Cidre
     </h2>
 
-  <p>
-    <b>Route: Saint-Nazaire to Saint-Cado via Quiberon, 178km</b>
-  </p>
+  <ul>
+    <li><b>Route: Saint-Nazaire to Saint-Cado via Quiberon</b></li><li><b>Distance:&nbsp;178km</b></li><li><b>Overnight spot:&nbsp;<a href="https://maps.app.goo.gl/q54A8tXSx3UL2Jjb7" target="_blank">Camping de Saint-Cado</a></b></li>
+  </ul>
 <div><!-- Leaflet CSS & JS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -235,9 +235,9 @@
       Day 3 - Beaches of Poulhan
     </h2>
 
-  <p>
-    <b>Route: Saint-Cado to Pors Poulhan, 155km</b>
-  </p>
+  <ul>
+    <li><b>Route: Saint-Cado to Pors Poulhan</b></li><li><b>Distance: 155km<br></b></li><li><b>Overnight spot: <a href="https://park4night.com/en/place/25755" target="_blank">Parking in Pors Poulhan</a></b></li>
+  </ul>
 <div><!-- Leaflet CSS & JS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -304,7 +304,7 @@
   </p>
 
   <ul>
-    <li>Definitely our parking spot for the nigh which is also available <a href="https://park4night.com/en/place/25755" target="_blank">here</a> on park4night.</li>
+    <li>Definitely our parking spot for the nigh which is also available <a href="https://park4night.com/en/place/25755" target="_blank" class="" data-link-popup-id="1d207cfd-4840-4343-8098-57c06c38d657">here</a> on park4night.</li>
   </ul>
 
   <div  class="gallery-wrapper gallery-wrapper--wide">
@@ -342,9 +342,9 @@
       Day 4 - Not Pointe du Raz
     </h2>
 
-  <p>
-    <b>Route:&nbsp;Pors Poulhan to Pen an Ero via Plogoff and Pen Hir, 130km</b>
-  </p>
+  <ul>
+    <li><b>Route:&nbsp;Pors Poulhan to Pen an Ero via Plogoff and Pen Hir</b></li><li><b>Distance:&nbsp;130km</b></li><li><b>Overnight spot:&nbsp;<a href="https://maps.app.goo.gl/pZvWqp6QvLw5PABt7" target="_blank">Camping Gwel Kaër</a></b></li>
+  </ul>
 <div><!-- Leaflet CSS & JS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -409,7 +409,7 @@
   </p>
 
   <p>
-    The day ended with us driving to the <i>Camping Gwel Kaër,</i>&nbsp;visiting <i>Le Fret</i>&nbsp;by foot and enjoying some Apéro and Cidre in a local bar, and then heading back to the camping for dinner - self-made burgers with rice. Warning: Cidre is very very tasty, but as it is made from apples it can have a laxative effect when consumed in big amounts - and camping toilets are not really the place you want to spend more than 5 minutes.
+    The day ended with us driving to the <i>Camping Gwel Kaër,</i>&nbsp;visiting <i>Le Fret</i>&nbsp;by foot and enjoying some Apéro and Cidre in a local bar called <i>La Jetée café de la Tour du Fret</i>, and then heading back to the camping for dinner - self-made burgers with rice. Warning: Cidre is very very tasty, but as it is made from apples it can have a laxative effect when consumed in big amounts - and camping toilets are not really the place you want to spend more than 5 minutes.
   </p>
 
   <p>
@@ -451,9 +451,204 @@
     </div>
   </div>
 
+    <h2 id="day-5-andnbspbrest">
+      Day 5 -&nbsp;Brest
+    </h2>
+
+  <ul>
+    <li><b>Route:&nbsp;Pen an Ero to Saint-Cava via Brest and Trémazan</b></li><li><b>Distance: 186km</b></li><li><b>Overnight spot: <a href="https://park4night.com/en/place/7253" target="_blank">Parking at Plage de Saint-Cava</a></b></li>
+  </ul>
+<div><!-- Leaflet CSS & JS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- Leaflet Routing Machine -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+<script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
+
+<!-- Map container -->
+<div id="map-day5" style="height: 400px; margin: 1em 0;"></div>
+
+<script>
+  var map = L.map('map-day5', {
+    zoomControl: false
+  }).setView([48.48270385007173, -4.513273500708651], 9);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  L.Routing.control({
+    waypoints: [
+      L.latLng(48.280853787152445, -4.502382504435114),
+      L.latLng(48.38319498678962, -4.492604995993671),
+      L.latLng(48.52189500360938, -4.758009227830243),
+      L.latLng(48.55788004425475, -4.721703410796188),
+      L.latLng(48.616710752342655, -4.564483734179645)
+    ],
+    createMarker: function(i, wp, nWps) {
+      if (i === 0 || i === nWps - 1) {
+        return L.marker(wp.latLng).bindPopup(
+          i === 0 ? 'Start: Camping Gwel Kaër' : 'Finish: Plage de Saint-Cava'
+        );
+      }
+      if (i === 1) {
+        return L.marker(wp.latLng).bindPopup(
+          'Brest'
+        );
+      }
+      return null;
+    },
+    routeWhileDragging: false,
+    draggableWaypoints: false,
+    addWaypoints: false,
+    show: false,
+    showAlternatives: false,
+    fitSelectedRoutes: true
+  }).addTo(map);
+</script></div>
+
   <p>
-    
+    The goal of day 5 was to visit <i>Brest</i>&nbsp;- the biggest city in western Brittany with its important harbour and the second largest French military port. With ~140'000 inhabitants, it is actually quite similar in size to Bern. The <a href="https://maps.app.goo.gl/2Xh64uYKGQ7EVgwL6" target="_blank">Parking Château</a> was very well located to visit the city for one day. It is in the middle of the city and close to all major sights.
   </p>
+
+  <p>
+    We started the sight-seeing by walking around the Château de Brest, heading towards the Pont de Recouvrance which gives an impressive view of the military harbour. Next on the list was the&nbsp;Téléphérique de Brest, the cable car which connects Brest over the river Penfeld. We can definitely recommend taking the cable car, it's cheap and gives you a unique view of the city. After enjoying the view out of the Téléphérique, we head towards Rue Saint-Malo - the oldest street in Brest which was not bombarded during World War II. There was much less going on than we expected, but the street lined with plants and the small gardens one can explore is definitely worth a visit (and also a lot of cats, which was a big plus for Rahel).
+  </p>
+
+  <p>
+    We ended our visit of Brest with lunch at the harbour and headed towards <i>Argenton.</i>&nbsp;Enjoying the views of the coast and with some good music (or was it "Die Drei ???" ?) we drove along the coast to finally end up in <i>Saint-Cava.</i>&nbsp;I again spotted a nice-looking parking lot on park4night (with free public toilet) right at the beach, and it did not disappoint.
+  </p>
+
+  <p>
+    <b>Highlights:</b>
+  </p>
+
+  <ul>
+    <li>The&nbsp;<a href="https://maps.app.goo.gl/oDHquJZauE5yWFC89" target="_blank">Téléphérique de Brest</a> was my highlight for the day - even though it is nothing special, it was a good change to driving around in a camper van.</li><li>The&nbsp;<a href="https://maps.app.goo.gl/9u7jQVnzZxSHj4ty7" target="_blank">Monument aux Forces Navales Américaines &amp; Françaises</a>&nbsp;was very impressive. It was erected by the USA to remind us of the achievements made by the naval forces of the USA and France during World War I.&nbsp;</li>
+  </ul>
+
+  <div  class="gallery-wrapper gallery-wrapper--wide">
+    <div class="gallery" data-columns="3">
+      <figure class="gallery__item">
+      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF7093.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF7093-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF7137.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF7137-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF7207.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF7207-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      
+    </figure>
+    </div>
+  </div>
+
+    <h2 id="day-6-rain-rain-and-roscoff">
+      Day 6 - Rain, Rain and Roscoff
+    </h2>
+
+  <ul>
+    <li><b>Route: Saint-Cava to Saint-Quay-Portrieux via Roscoff</b></li><li><b>Distance: 177km</b></li><li><b>Overnight spot: <a href="https://maps.app.goo.gl/YLELJp8j8qYJYzW67" target="_blank">Camping Bellevue Cotes d'Armor</a></b></li>
+  </ul>
+<div><!-- Leaflet CSS & JS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- Leaflet Routing Machine -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+<script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
+
+<!-- Map container -->
+<div id="map-day6" style="height: 400px; margin: 1em 0;"></div>
+
+<script>
+  var map = L.map('map-day6', {
+    zoomControl: false
+  }).setView([48.645265728208216, -3.5533086808984726], 9);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  L.Routing.control({
+    waypoints: [
+      L.latLng(48.61673767713646, -4.564419183801398),
+      L.latLng(48.64519680476736, -4.3684338864251355),
+      L.latLng(48.64771758681903, -4.21936568927276),
+      L.latLng(48.723878496894734, -3.98240860700066),
+      L.latLng(48.635748530161464, -3.7275960492355247),
+      L.latLng(48.77818806558939, -3.042307306400587),
+      L.latLng(48.66324585706489, -2.8445925487671646)
+    ],
+    createMarker: function(i, wp, nWps) {
+      if (i === 0 || i === nWps - 1) {
+        return L.marker(wp.latLng).bindPopup(
+          i === 0 ? 'Start: Plage de Saint-Cava' : 'Finish: Camping Bellevue Cotes d\'Armor'
+        );
+      }
+      return null;
+    },
+    routeWhileDragging: false,
+    draggableWaypoints: false,
+    addWaypoints: false,
+    show: false,
+    showAlternatives: false,
+    fitSelectedRoutes: true
+  }).addTo(map);
+</script></div>
+
+  <p>
+    Day 6 started as another rainy day in Brittany. We actually somewhat enjoyed these days - sleeping a little bit longer and listening to the rain hitting the roof-tent, driving along the coast and looking out towards the rough sea, stopping occasionally for coffee and food. This is also pretty much everything we did on day 6.
+  </p>
+
+  <p>
+    We drove from <i>Saint-Cava</i>&nbsp;straight to <i>Roscoff,</i>&nbsp;where we made our first stop. After discovering the city (or maybe village) we had the first Galette Bretonne, a specialty from Brittany which is very similar to the more well-known Crêpes. The afternoon took us all the way to <i>Saint-Quay-Portrieux,</i>&nbsp;where we were lucky again and found a beautiful camping with views directly towards the sea. The rest of the day was spent with discovering the local coast, some local beer and dinner (I can't remember what we had, but most likely self-made burgers with rice again or vegetarian chicken nuggets with rice - <i>haute cuisine</i>).
+  </p>
+
+  <p>
+    <b>Highlights:</b>
+  </p>
+
+  <ul>
+    <li><a href="https://maps.app.goo.gl/taLWK8pSpschcGgG7" target="_blank">Camping Bellevue Cotes d'Armor</a>&nbsp;was the highlight of the day. Not a lot of people, a beautiful spot with an incredible view and not too expensive.</li>
+  </ul>
+
+  <div  class="gallery-wrapper gallery-wrapper--wide">
+    <div class="gallery" data-columns="3">
+      <figure class="gallery__item">
+      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF7241.jpg" data-size="3000x2000">
+        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF7241-thumbnail.jpg" height="480" width="720" alt="" >
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF7300.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF7300-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF7318.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF7318-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF7471.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF7471-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF7586.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF7586-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      
+    </figure>
+    </div>
+  </div>
             ]]>
         </content>
     </entry>
