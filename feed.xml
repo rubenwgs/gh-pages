@@ -3,7 +3,7 @@
     <title>rwgs Blog</title>
     <link href="https://blog.rwgs.ch/feed.xml" rel="self" />
     <link href="https://blog.rwgs.ch" />
-    <updated>2025-07-31T12:05:13+02:00</updated>
+    <updated>2025-07-31T12:29:29+02:00</updated>
     <author>
         <name>Ruben</name>
     </author>
@@ -36,6 +36,82 @@
   <p>
     This will serve as more of a personal diary-like overview of our trip, though I'm sure you will also find this helpful for your own travel-plans to that region.
   </p>
+<div><!-- Leaflet CSS & JS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+<script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
+
+<!-- Map wrapper -->
+<div class="map-wrapper">
+  <div id="map-overview" class="leaflet-map"></div>
+  <div class="map-overlay" id="map-overview-overlay">Click to activate map</div>
+</div>
+
+<script>
+  const mapOverview = L.map('map-overview', {
+    zoomControl: false
+  }).setView([47.8, -2.5], 7);  // Adjust zoom for full route
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(mapOverview);
+
+  const overviewWaypoints = [
+    L.latLng(47.22214, -1.51173),  // Start: Nantes
+    L.latLng(47.24062, -2.27046),  // Day 1: Saint-Nazaire
+    L.latLng(47.68275, -3.18866),  // Day 2: Saint-Cado
+    L.latLng(47.98018, -4.44954),  // Day 3: Pors Poulhan
+    L.latLng(48.28085, -4.50238),  // Day 4: Camping Gwel Kaër
+    L.latLng(48.61671, -4.56448),  // Day 5: Plage de Saint-Cava
+    L.latLng(48.66325, -2.84459),  // Day 6: Camping Bellevue Côtes d'Armor
+    L.latLng(48.78961, -1.56731),  // Day 7: Camping l'Etoile de Mer
+    L.latLng(47.63077, -0.71196),  // Day 8: Camping du Lion d'Angers
+    L.latLng(47.22202, -1.51182)   // Day 9: Nantes (return)
+  ];
+
+  const labels = [
+    "Start: Nantes",
+    "Day 1: Saint-Nazaire",
+    "Day 2: Saint-Cado",
+    "Day 3: Pors Poulhan",
+    "Day 4: Camping Gwel Kaër",
+    "Day 5: Plage de Saint-Cava",
+    "Day 6: Camping Bellevue Côtes d'Armor",
+    "Day 7: Camping l'Etoile de Mer",
+    "Day 8: Camping du Lion d'Angers",
+    "Finish: Nantes"
+  ];
+
+  // Create routing control
+  const overviewControl = L.Routing.control({
+    waypoints: overviewWaypoints,
+    createMarker: function(i, wp, nWps) {
+      return L.marker(wp.latLng).bindPopup(labels[i]);
+    },
+    routeWhileDragging: false,
+    draggableWaypoints: false,
+    addWaypoints: false,
+    show: false,
+    showAlternatives: false,
+    fitSelectedRoutes: true
+  }).addTo(mapOverview);
+
+  const overlayOverview = document.getElementById('map-overview-overlay');
+  const containerOverview = document.getElementById('map-overview');
+
+  overlayOverview.addEventListener('click', () => {
+    containerOverview.classList.add('enabled');
+    overlayOverview.classList.add('hidden');
+  });
+
+  containerOverview.addEventListener('mouseleave', () => {
+    containerOverview.classList.remove('enabled');
+    overlayOverview.classList.remove('hidden');
+  });
+</script>
+</div>
 
   <div class="post__toc">
     <h3>Overview</h3>
@@ -52,14 +128,7 @@
   <ul>
     <li><b>Route: Nantes to Saint-Nazaire</b></li><li><b>Distance:&nbsp;99km</b></li><li><b>Overnight spot: <a href="https://park4night.com/en/place/293293" target="_blank">Parking at&nbsp;Plage de la Courance</a></b></li>
   </ul>
-<div><!-- Leaflet CSS & JS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
-<script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
-
-<!-- Map container and overlay -->
+<div><!-- Map container and overlay -->
 <div class="map-wrapper">
   <div id="map-day1" class="leaflet-map"></div>
   <div class="map-overlay" id="map-day1-overlay">Click to activate map</div>
@@ -854,6 +923,105 @@
     <h2 id="day-9-dungeon-and-dragons-of-nantes">
       Day 9 - Dungeon and Dragons of Nantes
     </h2>
+
+  <ul>
+    <li><b>Route: Le Lion-d'Angers to Nantes</b></li><li><b>Distance: 100km</b></li><li><b>Overnight spot: <a href="https://maps.app.goo.gl/CeVFbNVukU1My5166" target="_blank">Hotel Billie Nantes</a></b></li>
+  </ul>
+<div><div class="map-wrapper">
+  <div id="map-day9" class="leaflet-map"></div>
+  <div class="map-overlay" id="map-day9-overlay">Click to activate map</div>
+</div>
+
+<script>
+  const map9 = L.map('map-day9', {
+    zoomControl: false
+  }).setView([47.363124449953, -1.0947837590978233], 9);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map9);
+
+  const control9 = L.Routing.control({
+    waypoints: [
+      L.latLng(47.63077334540342, -0.711961371601432),
+      L.latLng(47.222022357069726, -1.511819703336058)
+    ],
+    createMarker: function(i, wp, nWps) {
+      if (i === 0) return L.marker(wp.latLng).bindPopup("Start: Camping du Lion d'Angers");
+      if (i === nWps - 1) return L.marker(wp.latLng).bindPopup("Finish: Nantes");
+      return null;
+    },
+    routeWhileDragging: false,
+    draggableWaypoints: false,
+    addWaypoints: false,
+    show: false,
+    showAlternatives: false,
+    fitSelectedRoutes: true
+  }).addTo(map9);
+
+  const overlay9 = document.getElementById('map-day9-overlay');
+  const container9 = document.getElementById('map-day9');
+
+  overlay9.addEventListener('click', () => {
+    container9.classList.add('enabled');
+    overlay9.classList.add('hidden');
+  });
+
+  container9.addEventListener('mouseleave', () => {
+    container9.classList.remove('enabled');
+    overlay9.classList.remove('hidden');
+  });
+</script>
+
+</div>
+
+  <p>
+    Day 9, the last time waking up in our small cozy camper, enjoying the sunrise and some coffee. It is amazing how fast time flies by when you're just driving around a country without a real plan, but we enjoyed every minute of it.
+  </p>
+
+  <p>
+    The last stop on the list was roadsurfer Nantes where we dropped off our camper van without any problems and then headed to our hotel. The <a href="https://maps.app.goo.gl/CeVFbNVukU1My5166" target="_blank">Hotel Billie</a> we chose was located in the center, somewhat cheap and cute - I would definitely recommend it. After checking in it was time for lunch, hangry was on the horizon. After some back and forth we decided on Indian food which turned out to be a great decision (we landed on <a href="https://maps.app.goo.gl/VcA3wuE6XFoEVUAB9" target="_blank">Restaurant Shalimar</a> which was close to our hotel and it was very good!). The afternoon was spent with strolling through the city, discovering the local Uniqlo (yes, again) and then heading back to our hotel to prepare for a night out.
+  </p>
+
+  <p>
+    The goal for this evening was: good cocktails and good food. The first we achieved, the second not. The start was <a href="https://maps.app.goo.gl/pHB9TWxTeFDfrTuu9" target="_blank">Santeuil Café</a>, and even though the cocktails were good, the place just didn't feel welcoming, everything seemed somewhat old and rund-down. Next up was&nbsp;<a href="https://maps.app.goo.gl/EgCvQU44CxjXehnMA" target="_blank">La Taverne Des Aventuriers</a> - one might think why the name is weird, but we didn't think, we wanted good cocktails. Only after ordering the first round we realised we were in some kind of Dungeon and Dragons bar (that was maybe also the reason that everyone else in the bar was playing table games?) but nevertheless, the drinks were superb! Last up was food and I though I made a good call with <a href="https://maps.app.goo.gl/Bbd72yVMnJqAGYeVA" target="_blank">A Cantina</a> - I didn't and there is nothing more to say about that, just don't go there, not worth it.
+  </p>
+
+  <p>
+    And that was it. We headed back to our hotel for our final night and took the train back to Bern on the next day -&nbsp;<i>à bientôt!</i>
+  </p>
+
+  <div  class="gallery-wrapper gallery-wrapper--wide">
+    <div class="gallery" data-columns="3">
+      <figure class="gallery__item">
+      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF8342.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF8342-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF8358.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF8358-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF8384.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF8384-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF8458.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF8458-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF8462.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF8462-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      
+    </figure>
+    </div>
+  </div>
+<hr class="separator separator--dots" />
 
   <p>
     
