@@ -9,39 +9,4 @@
                     this.classList.add('is-loaded');
                 }, false);
             }
-        }</script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css"><script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script><script>function initLeafletMap(mapId, waypoints, labels = []) {
-    const map = L.map(mapId, { zoomControl: false }).setView(waypoints[0], 10);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors'
-    }).addTo(map);
-
-    L.Routing.control({
-      waypoints: waypoints.map(([lat, lng]) => L.latLng(lat, lng)),
-      createMarker: function(i, wp, nWps) {
-        if (labels[i]) {
-          return L.marker(wp.latLng).bindPopup(labels[i]);
-        }
-        return null;
-      },
-      routeWhileDragging: false,
-      draggableWaypoints: false,
-      addWaypoints: false,
-      show: false,
-      showAlternatives: false,
-      fitSelectedRoutes: true
-    }).addTo(map);
-
-    const container = document.getElementById(mapId);
-    const overlay = document.getElementById(`${mapId}-overlay`);
-
-    overlay.addEventListener('click', () => {
-      container.classList.add('enabled');
-      overlay.classList.add('hidden');
-    });
-
-    container.addEventListener('mouseleave', () => {
-      container.classList.remove('enabled');
-      overlay.classList.remove('hidden');
-    });
-  }</script></body></html>
+        }</script></body></html>

@@ -3,7 +3,7 @@
     <title>rwgs Blog</title>
     <link href="https://blog.rwgs.ch/feed.xml" rel="self" />
     <link href="https://blog.rwgs.ch" />
-    <updated>2025-07-31T10:49:42+02:00</updated>
+    <updated>2025-07-31T11:09:53+02:00</updated>
     <author>
         <name>Ruben</name>
     </author>
@@ -52,25 +52,60 @@
   <ul>
     <li><b>Route: Nantes to Saint-Nazaire</b></li><li><b>Distance:&nbsp;99km</b></li><li><b>Overnight spot: <a href="https://park4night.com/en/place/293293" target="_blank">Parking at&nbsp;Plage de la Courance</a></b></li>
   </ul>
-<div><div class="map-wrapper">
+<div><!-- Leaflet CSS & JS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+<script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
+
+<!-- Map container and overlay -->
+<div class="map-wrapper">
   <div id="map-day1" class="leaflet-map"></div>
   <div class="map-overlay" id="map-day1-overlay">Click to activate map</div>
 </div>
 
 <script>
-  initLeafletMap(
-    "map-day1",
-    [
-      [47.22214, -1.51173],  // Nantes
-      [47.11938, -2.09161],
-      [47.24062, -2.27046]   // Saint-Nazaire
+  const map = L.map('map-day1', {
+    zoomControl: false
+  }).setView([47.22214, -1.51173], 10);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  const control = L.Routing.control({
+    waypoints: [
+      L.latLng(47.22214, -1.51173),  // Nantes
+      L.latLng(47.11938, -2.09161),  // Optional stop
+      L.latLng(47.24062, -2.27046)   // Saint-Nazaire
     ],
-    [
-      "Start: Nantes",
-      null,
-      "Finish: Saint-Nazaire"
-    ]
-  );
+    createMarker: function(i, wp, nWps) {
+      if (i === 0) return L.marker(wp.latLng).bindPopup("Start: Nantes");
+      if (i === nWps - 1) return L.marker(wp.latLng).bindPopup("Finish: Saint-Nazaire");
+      return null;
+    },
+    routeWhileDragging: false,
+    draggableWaypoints: false,
+    addWaypoints: false,
+    show: false,
+    showAlternatives: false,
+    fitSelectedRoutes: true
+  }).addTo(map);
+
+  // Interaction overlay
+  const overlay = document.getElementById('map-day1-overlay');
+  const container = document.getElementById('map-day1');
+
+  overlay.addEventListener('click', () => {
+    container.classList.add('enabled');
+    overlay.classList.add('hidden');
+  });
+
+  container.addEventListener('mouseleave', () => {
+    container.classList.remove('enabled');
+    overlay.classList.remove('hidden');
+  });
 </script>
 
 </div>
@@ -119,40 +154,35 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-<!-- Leaflet Routing Machine -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
 <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
 
-<!-- Map container -->
-<div id="map-day2" style="height: 400px; margin: 1em 0;"></div>
+<!-- Map wrapper -->
+<div class="map-wrapper">
+  <div id="map-day2" class="leaflet-map"></div>
+  <div class="map-overlay" id="map-day2-overlay">Click to activate map</div>
+</div>
 
 <script>
-  var map = L.map('map-day2', {
+  const map = L.map('map-day2', {
     zoomControl: false
-  }).setView([47.55595368910675, -2.714656425622805], 9);
+  }).setView([47.55595, -2.71465], 9);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
   }).addTo(map);
 
-  L.Routing.control({
+  const control = L.Routing.control({
     waypoints: [
-      L.latLng(47.240723960606736, -2.2703691504715837),
-      L.latLng(47.30370245285182, -2.455923333318907),
-      L.latLng(47.47577683282665, -3.1319645630408783),
-      L.latLng(47.682747495227105, -3.188668053375401)
+      L.latLng(47.24072, -2.27037),  // Start: Saint-Nazaire
+      L.latLng(47.30370, -2.45592),  // Marais salants
+      L.latLng(47.47577, -3.13196),
+      L.latLng(47.68275, -3.18866)   // Finish: Saint-Cado
     ],
     createMarker: function(i, wp, nWps) {
-      if (i === 0 || i === nWps - 1) {
-        return L.marker(wp.latLng).bindPopup(
-          i === 0 ? 'Start: Saint-Nazaire' : 'Finish: Saint-Cado'
-        );
-      }
-      if (i === 1) {
-        return L.marker(wp.latLng).bindPopup(
-          'Marais salants de Guérande'
-        );
-      }
+      if (i === 0) return L.marker(wp.latLng).bindPopup("Start: Saint-Nazaire");
+      if (i === 1) return L.marker(wp.latLng).bindPopup("Marais salants de Guérande");
+      if (i === nWps - 1) return L.marker(wp.latLng).bindPopup("Finish: Saint-Cado");
       return null;
     },
     routeWhileDragging: false,
@@ -162,6 +192,19 @@
     showAlternatives: false,
     fitSelectedRoutes: true
   }).addTo(map);
+
+  const overlay = document.getElementById('map-day2-overlay');
+  const container = document.getElementById('map-day2');
+
+  overlay.addEventListener('click', () => {
+    container.classList.add('enabled');
+    overlay.classList.add('hidden');
+  });
+
+  container.addEventListener('mouseleave', () => {
+    container.classList.remove('enabled');
+    overlay.classList.remove('hidden');
+  });
 </script>
 
 </div>
@@ -219,43 +262,38 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-<!-- Leaflet Routing Machine -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
 <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
 
-<!-- Map container -->
-<div id="map-day3" style="height: 400px; margin: 1em 0;"></div>
+<!-- Map wrapper -->
+<div class="map-wrapper">
+  <div id="map-day3" class="leaflet-map"></div>
+  <div class="map-overlay" id="map-day3-overlay">Click to activate map</div>
+</div>
 
 <script>
-  var map = L.map('map-day3', {
+  const map = L.map('map-day3', {
     zoomControl: false
-  }).setView([47.85544276938025, -3.747982350172207], 9);
+  }).setView([47.85544, -3.74798], 9);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
   }).addTo(map);
 
-  L.Routing.control({
+  const control = L.Routing.control({
     waypoints: [
-      L.latLng(47.682747495227105, -3.188668053375401),
-      L.latLng(47.73561082887954, -3.5004857881502174),
-      L.latLng(47.79780695162485, -3.523095788680409),
-      L.latLng(47.82180073136549, -3.6512107801302642),
-      L.latLng(47.85544276938025, -3.747982350172207),
-      L.latLng(47.88499277177443, -4.1219449532343075),
-      L.latLng(47.98018427347514, -4.4495398100344525)
+      L.latLng(47.68275, -3.18866),   // Start: Saint-Cado
+      L.latLng(47.73561, -3.50048),
+      L.latLng(47.79781, -3.52310),
+      L.latLng(47.82180, -3.65121),
+      L.latLng(47.85544, -3.74798),   // Pont-Aven (labeled)
+      L.latLng(47.88499, -4.12194),
+      L.latLng(47.98018, -4.44954)    // Finish: Pors Poulhan
     ],
     createMarker: function(i, wp, nWps) {
-      if (i === 0 || i === nWps - 1) {
-        return L.marker(wp.latLng).bindPopup(
-          i === 0 ? 'Start: Saint-Cado' : 'Finish: Pors Poulhan'
-        );
-      }
-      if (i === 4) {
-        return L.marker(wp.latLng).bindPopup(
-          'Pont-Aven'
-        );
-      }
+      if (i === 0) return L.marker(wp.latLng).bindPopup("Start: Saint-Cado");
+      if (i === 4) return L.marker(wp.latLng).bindPopup("Pont-Aven");
+      if (i === nWps - 1) return L.marker(wp.latLng).bindPopup("Finish: Pors Poulhan");
       return null;
     },
     routeWhileDragging: false,
@@ -265,7 +303,21 @@
     showAlternatives: false,
     fitSelectedRoutes: true
   }).addTo(map);
+
+  const overlay = document.getElementById('map-day3-overlay');
+  const container = document.getElementById('map-day3');
+
+  overlay.addEventListener('click', () => {
+    container.classList.add('enabled');
+    overlay.classList.add('hidden');
+  });
+
+  container.addEventListener('mouseleave', () => {
+    container.classList.remove('enabled');
+    overlay.classList.remove('hidden');
+  });
 </script>
+
 </div>
 
   <p>
@@ -326,46 +378,37 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-<!-- Leaflet Routing Machine -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
 <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
 
-<!-- Map container -->
-<div id="map-day4" style="height: 400px; margin: 1em 0;"></div>
+<!-- Map wrapper -->
+<div class="map-wrapper">
+  <div id="map-day4" class="leaflet-map"></div>
+  <div class="map-overlay" id="map-day4-overlay">Click to activate map</div>
+</div>
 
 <script>
-  var map = L.map('map-day4', {
+  const map = L.map('map-day4', {
     zoomControl: false
-  }).setView([48.14052401112773, -4.43612874321248], 9);
+  }).setView([48.14052, -4.43613], 9);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
   }).addTo(map);
 
-  L.Routing.control({
+  const control = L.Routing.control({
     waypoints: [
-      L.latLng(47.98018427347514, -4.4495398100344525),
-      L.latLng(48.03738622291839, -4.712253341168814),
-      L.latLng(48.08972600393127, -4.33374716324796),
-      L.latLng(48.258390478604994, -4.621275620371143),
-      L.latLng(48.280853787152445, -4.502382504435114)
+      L.latLng(47.98018, -4.44954),   // Start: Pors Poulhan
+      L.latLng(48.03739, -4.71225),   // Monsieur Papier
+      L.latLng(48.08973, -4.33375),
+      L.latLng(48.25839, -4.62128),   // Pen Hir
+      L.latLng(48.28085, -4.50238)    // Finish: Camping Gwel Kaër
     ],
     createMarker: function(i, wp, nWps) {
-      if (i === 0 || i === nWps - 1) {
-        return L.marker(wp.latLng).bindPopup(
-          i === 0 ? 'Start: Pors Poulhan' : 'Finish: Camping Gwel Kaër'
-        );
-      }
-      if (i === 1) {
-        return L.marker(wp.latLng).bindPopup(
-          'Monsieur Papier'
-        );
-      }
-      if (i === 3) {
-        return L.marker(wp.latLng).bindPopup(
-          'Pen Hir'
-        );
-      }
+      if (i === 0) return L.marker(wp.latLng).bindPopup("Start: Pors Poulhan");
+      if (i === 1) return L.marker(wp.latLng).bindPopup("Monsieur Papier");
+      if (i === 3) return L.marker(wp.latLng).bindPopup("Pen Hir");
+      if (i === nWps - 1) return L.marker(wp.latLng).bindPopup("Finish: Camping Gwel Kaër");
       return null;
     },
     routeWhileDragging: false,
@@ -375,7 +418,21 @@
     showAlternatives: false,
     fitSelectedRoutes: true
   }).addTo(map);
-</script></div>
+
+  const overlay = document.getElementById('map-day4-overlay');
+  const container = document.getElementById('map-day4');
+
+  overlay.addEventListener('click', () => {
+    container.classList.add('enabled');
+    overlay.classList.add('hidden');
+  });
+
+  container.addEventListener('mouseleave', () => {
+    container.classList.remove('enabled');
+    overlay.classList.remove('hidden');
+  });
+</script>
+</div>
 
   <p>
     Unfortunately, day 4 did not surprise us with good weather. Even though we set our alarm clock the earliest we had so far this trip, we were not able to enjoy the sunrise from the roof tent of our camper van. Nevertheless, the first goal was clear: visiting the infamous <i>Pointe du Raz</i>&nbsp;to see the up to 72m high cliffs. What we did not know was how famous <i>Point du Raz</i>&nbsp;was - there is a touristic center some distance away from the cliffs, where you park your car and are shuttled with a bus from there onwards. We quickly decided that this was not for us, and instead enjoyed breakfast in a small coffee shop we discovered by chance called <i>Monsieur Papier.</i>
@@ -435,45 +492,33 @@
   <ul>
     <li><b>Route:&nbsp;Pen an Ero to Saint-Cava via Brest and Trémazan</b></li><li><b>Distance: 186km</b></li><li><b>Overnight spot: <a href="https://park4night.com/en/place/7253" target="_blank">Parking at Plage de Saint-Cava</a></b></li>
   </ul>
-<div><!-- Leaflet CSS & JS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-<!-- Leaflet Routing Machine -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
-<script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
-
-<!-- Map container -->
-<div id="map-day5" style="height: 400px; margin: 1em 0;"></div>
+<div><!-- Map wrapper -->
+<div class="map-wrapper">
+  <div id="map-day5" class="leaflet-map"></div>
+  <div class="map-overlay" id="map-day5-overlay">Click to activate map</div>
+</div>
 
 <script>
-  var map = L.map('map-day5', {
+  const map = L.map('map-day5', {
     zoomControl: false
-  }).setView([48.48270385007173, -4.513273500708651], 9);
+  }).setView([48.48270, -4.51327], 9);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
   }).addTo(map);
 
-  L.Routing.control({
+  const control = L.Routing.control({
     waypoints: [
-      L.latLng(48.280853787152445, -4.502382504435114),
-      L.latLng(48.38319498678962, -4.492604995993671),
-      L.latLng(48.52189500360938, -4.758009227830243),
-      L.latLng(48.55788004425475, -4.721703410796188),
-      L.latLng(48.616710752342655, -4.564483734179645)
+      L.latLng(48.28085, -4.50238),   // Camping Gwel Kaër
+      L.latLng(48.38319, -4.49260),   // Brest
+      L.latLng(48.52189, -4.75801),
+      L.latLng(48.55788, -4.72170),
+      L.latLng(48.61671, -4.56448)    // Finish: Plage de Saint-Cava
     ],
     createMarker: function(i, wp, nWps) {
-      if (i === 0 || i === nWps - 1) {
-        return L.marker(wp.latLng).bindPopup(
-          i === 0 ? 'Start: Camping Gwel Kaër' : 'Finish: Plage de Saint-Cava'
-        );
-      }
-      if (i === 1) {
-        return L.marker(wp.latLng).bindPopup(
-          'Brest'
-        );
-      }
+      if (i === 0) return L.marker(wp.latLng).bindPopup("Start: Camping Gwel Kaër");
+      if (i === 1) return L.marker(wp.latLng).bindPopup("Brest");
+      if (i === nWps - 1) return L.marker(wp.latLng).bindPopup("Finish: Plage de Saint-Cava");
       return null;
     },
     routeWhileDragging: false,
@@ -483,7 +528,21 @@
     showAlternatives: false,
     fitSelectedRoutes: true
   }).addTo(map);
-</script></div>
+
+  const overlay = document.getElementById('map-day5-overlay');
+  const container = document.getElementById('map-day5');
+
+  overlay.addEventListener('click', () => {
+    container.classList.add('enabled');
+    overlay.classList.add('hidden');
+  });
+
+  container.addEventListener('mouseleave', () => {
+    container.classList.remove('enabled');
+    overlay.classList.remove('hidden');
+  });
+</script>
+</div>
 
   <p>
     The goal of day 5 was to visit <i>Brest</i>&nbsp;- the biggest city in western Brittany with its important harbour and the second largest French military port. With ~140'000 inhabitants, it is actually quite similar in size to Bern. The <a href="https://maps.app.goo.gl/2Xh64uYKGQ7EVgwL6" target="_blank">Parking Château</a> was very well located to visit the city for one day. It is in the middle of the city and close to all major sights.
@@ -533,42 +592,34 @@
   <ul>
     <li><b>Route: Saint-Cava to Saint-Quay-Portrieux via Roscoff</b></li><li><b>Distance: 177km</b></li><li><b>Overnight spot: <a href="https://maps.app.goo.gl/YLELJp8j8qYJYzW67" target="_blank">Camping Bellevue Cotes d'Armor</a></b></li>
   </ul>
-<div><!-- Leaflet CSS & JS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-<!-- Leaflet Routing Machine -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
-<script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
-
-<!-- Map container -->
-<div id="map-day6" style="height: 400px; margin: 1em 0;"></div>
+<div><!-- Map wrapper -->
+<div class="map-wrapper">
+  <div id="map-day6" class="leaflet-map"></div>
+  <div class="map-overlay" id="map-day6-overlay">Click to activate map</div>
+</div>
 
 <script>
-  var map = L.map('map-day6', {
+  const map = L.map('map-day6', {
     zoomControl: false
-  }).setView([48.645265728208216, -3.5533086808984726], 9);
+  }).setView([48.64527, -3.55331], 9);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
   }).addTo(map);
 
-  L.Routing.control({
+  const control = L.Routing.control({
     waypoints: [
-      L.latLng(48.61673767713646, -4.564419183801398),
-      L.latLng(48.64519680476736, -4.3684338864251355),
-      L.latLng(48.64771758681903, -4.21936568927276),
-      L.latLng(48.723878496894734, -3.98240860700066),
-      L.latLng(48.635748530161464, -3.7275960492355247),
-      L.latLng(48.77818806558939, -3.042307306400587),
-      L.latLng(48.66324585706489, -2.8445925487671646)
+      L.latLng(48.61674, -4.56442),  // Start
+      L.latLng(48.64520, -4.36843),
+      L.latLng(48.64772, -4.21937),
+      L.latLng(48.72388, -3.98241),
+      L.latLng(48.63575, -3.72760),
+      L.latLng(48.77819, -3.04231),
+      L.latLng(48.66325, -2.84459)   // Finish
     ],
     createMarker: function(i, wp, nWps) {
-      if (i === 0 || i === nWps - 1) {
-        return L.marker(wp.latLng).bindPopup(
-          i === 0 ? 'Start: Plage de Saint-Cava' : 'Finish: Camping Bellevue Cotes d\'Armor'
-        );
-      }
+      if (i === 0) return L.marker(wp.latLng).bindPopup("Start: Plage de Saint-Cava");
+      if (i === nWps - 1) return L.marker(wp.latLng).bindPopup("Finish: Camping Bellevue Côtes d'Armor");
       return null;
     },
     routeWhileDragging: false,
@@ -578,7 +629,21 @@
     showAlternatives: false,
     fitSelectedRoutes: true
   }).addTo(map);
-</script></div>
+
+  const overlay = document.getElementById('map-day6-overlay');
+  const container = document.getElementById('map-day6');
+
+  overlay.addEventListener('click', () => {
+    container.classList.add('enabled');
+    overlay.classList.add('hidden');
+  });
+
+  container.addEventListener('mouseleave', () => {
+    container.classList.remove('enabled');
+    overlay.classList.remove('hidden');
+  });
+</script>
+</div>
 
   <p>
     Day 6 started as another rainy day in Brittany. We actually somewhat enjoyed these days - sleeping a little bit longer and listening to the rain hitting the roof-tent, driving along the coast and looking out towards the rough sea, stopping occasionally for coffee and food. This is also pretty much everything we did on day 6.
