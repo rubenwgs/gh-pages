@@ -3,7 +3,7 @@
     <title>rwgs Blog</title>
     <link href="https://blog.rwgs.ch/feed.xml" rel="self" />
     <link href="https://blog.rwgs.ch" />
-    <updated>2025-07-31T11:48:28+02:00</updated>
+    <updated>2025-07-31T12:05:13+02:00</updated>
     <author>
         <name>Ruben</name>
     </author>
@@ -40,7 +40,7 @@
   <div class="post__toc">
     <h3>Overview</h3>
     <ul>
-      <li><a href="#day-1-arriving-in-nantes">Day 1 - Arriving in Nantes</a></li><li><a href="#day-2-la-petite-maison-aux-volets-bleus-and-the-first-cidre">Day 2 - La Petite Maison Aux Volets Bleus and the First Cidre</a></li><li><a href="#day-3-beaches-of-poulhan">Day 3 - Beaches of Poulhan</a></li><li><a href="#day-4-not-pointe-du-raz">Day 4 - Not Pointe du Raz</a></li><li><a href="#day-5-andnbspbrest">Day 5 -&nbsp;Brest</a></li><li><a href="#day-6-rain-rain-and-roscoff">Day 6 - Rain, Rain and Roscoff</a></li><li><a href="#day-7-saint-malo">Day 7 - Saint-Malo</a></li><li><a href="#day-8-uniqlo">Day 8 - Uniqlo</a></li>
+      <li><a href="#day-1-arriving-in-nantes">Day 1 - Arriving in Nantes</a></li><li><a href="#day-2-la-petite-maison-aux-volets-bleus-and-the-first-cidre">Day 2 - La Petite Maison Aux Volets Bleus and the First Cidre</a></li><li><a href="#day-3-beaches-of-poulhan">Day 3 - Beaches of Poulhan</a></li><li><a href="#day-4-not-pointe-du-raz">Day 4 - Not Pointe du Raz</a></li><li><a href="#day-5-andnbspbrest">Day 5 -&nbsp;Brest</a></li><li><a href="#day-6-rain-rain-and-roscoff">Day 6 - Rain, Rain and Roscoff</a></li><li><a href="#day-7-saint-malo">Day 7 - Saint-Malo</a></li><li><a href="#day-8-uniqlo-and-rennes">Day 8 - Uniqlo and Rennes</a></li><li><a href="#day-9-dungeon-and-dragons-of-nantes">Day 9 - Dungeon and Dragons of Nantes</a></li>
     </ul>
   </div>
   
@@ -142,6 +142,7 @@
     </figure>
     </div>
   </div>
+<hr class="separator separator--dot" />
 
     <h2 id="day-2-la-petite-maison-aux-volets-bleus-and-the-first-cidre">
       Day 2 - La Petite Maison Aux Volets Bleus and the First Cidre
@@ -242,6 +243,7 @@
     </figure>
     </div>
   </div>
+<hr class="separator separator--dot" />
 
     <h2 id="day-3-beaches-of-poulhan">
       Day 3 - Beaches of Poulhan
@@ -350,6 +352,7 @@
     </figure>
     </div>
   </div>
+<hr class="separator separator--dot" />
 
     <h2 id="day-4-not-pointe-du-raz">
       Day 4 - Not Pointe du Raz
@@ -461,6 +464,7 @@
     </figure>
     </div>
   </div>
+<hr class="separator separator--dot" />
 
     <h2 id="day-5-andnbspbrest">
       Day 5 -&nbsp;Brest
@@ -561,6 +565,7 @@
     </figure>
     </div>
   </div>
+<hr class="separator separator--dot" />
 
     <h2 id="day-6-rain-rain-and-roscoff">
       Day 6 - Rain, Rain and Roscoff
@@ -668,6 +673,7 @@
     </figure>
     </div>
   </div>
+<hr class="separator separator--dot" />
 
     <h2 id="day-7-saint-malo">
       Day 7 - Saint-Malo
@@ -761,14 +767,93 @@
     </figure>
     </div>
   </div>
+<hr class="separator separator--dot" />
 
-    <h2 id="day-8-uniqlo">
-      Day 8 - Uniqlo
+    <h2 id="day-8-uniqlo-and-rennes">
+      Day 8 - Uniqlo and Rennes
     </h2>
 
   <ul>
     <li><b>Route:&nbsp;Saint-Pair-sur-Mer to Le Lion-d'Angers via Rennes</b></li><li><b>Distance: 214km</b></li><li><b>Overnight spot:&nbsp;<a href="https://maps.app.goo.gl/p9fsu1LrdpgBSD4T7" target="_blank">Camping du Lion d'Angers</a></b></li>
   </ul>
+<div><div class="map-wrapper">
+  <div id="map-day8" class="leaflet-map"></div>
+  <div class="map-overlay" id="map-day8-overlay">Click to activate map</div>
+</div>
+
+<script>
+  const map8 = L.map('map-day8', {
+    zoomControl: false
+  }).setView([48.11004686747263, -1.682468430654723], 9);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map8);
+
+  const control8 = L.Routing.control({
+    waypoints: [
+      L.latLng(48.78961433080952, -1.5671439406865995),
+      L.latLng(48.11004686747263, -1.682468430654723),
+      L.latLng(47.63077334540342, -0.711961371601432)
+    ],
+    createMarker: function(i, wp, nWps) {
+      if (i === 0) return L.marker(wp.latLng).bindPopup("Start: Camping l'Etoile de Mer");
+      if (i === 1) return L.marker(wp.latLng).bindPopup("Parking in Rennes");
+      if (i === nWps - 1) return L.marker(wp.latLng).bindPopup("Finish: Camping du Lion d'Angers");
+      return null;
+    },
+    routeWhileDragging: false,
+    draggableWaypoints: false,
+    addWaypoints: false,
+    show: false,
+    showAlternatives: false,
+    fitSelectedRoutes: true
+  }).addTo(map8);
+
+  const overlay8 = document.getElementById('map-day8-overlay');
+  const container8 = document.getElementById('map-day8');
+
+  overlay8.addEventListener('click', () => {
+    container8.classList.add('enabled');
+    overlay8.classList.add('hidden');
+  });
+
+  container8.addEventListener('mouseleave', () => {
+    container8.classList.remove('enabled');
+    overlay8.classList.remove('hidden');
+  });
+</script>
+
+</div>
+
+  <p>
+    Day 8 was the last full day on the road. The goal was clear: Uniqlo, and maybe also <i>Rennes</i> itself. Therefore, after some coffee and a quick breakfast, we head straight for <i>Rennes.</i>&nbsp;We were lucky again and found parking spot right in the middle of the city, located <a href="https://maps.app.goo.gl/w7DqzXsjdV68Tueb7" target="_blank">here</a>.
+  </p>
+
+  <p>
+    After our visit to <i>Rennes,</i>&nbsp;we headed towards <i>Nantes</i>&nbsp;where we needed to drop off our van the next day. We found a cosy camping in <i>Le Lion-d'Angers</i> which was pretty much empty (there were maybe 4 other campers) and spent our last night there.
+  </p>
+
+  <div  class="gallery-wrapper gallery-wrapper--wide">
+    <div class="gallery" data-columns="3">
+      <figure class="gallery__item">
+      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF8148.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF8148-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://blog.rwgs.ch/media/posts/1/gallery/DSCF8229.jpg" data-size="2000x3000">
+        <img loading="lazy" src="https://blog.rwgs.ch/media/posts/1/gallery/DSCF8229-thumbnail.jpg" height="1080" width="720" alt="" >
+      </a>
+      
+    </figure>
+    </div>
+  </div>
+<hr class="separator separator--dot" />
+
+    <h2 id="day-9-dungeon-and-dragons-of-nantes">
+      Day 9 - Dungeon and Dragons of Nantes
+    </h2>
 
   <p>
     
